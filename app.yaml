@@ -1,0 +1,17 @@
+services:
+    session:
+        class: \Core\Session
+    file:
+        class: \Core\File
+    validator2:
+        class: \Core\Validator2
+    authorize:
+        class: \Core\Authorize
+    middleware:
+        class: \Core\MiddlewareHandler
+    database:
+        class: \Core\MysqlDatabase
+        arguments:
+            - "%env(DB_CONNECTION)%:host=%env(DB_HOST)%:port=%env(DB_PORT)%:dbname=%env(DB_NAME)%:charset=utf8"
+            - "%env(DB_USER)%"
+            - "%env(DB_PASSWORD)%"

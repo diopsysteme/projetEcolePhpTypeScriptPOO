@@ -1,0 +1,14 @@
+[build]
+  base = ""
+  publish = "public"
+  command = "composer install"
+
+[context.production.environment]
+  PHP_VERSION = "8.1"
+  DB_HOST = "127.0.0.1"
+  DB_NAME = "dette"
+  DB_USER = "mhd"
+  DB_PASSWORD = "passer"
+  
+  [functions]
+  directory = "netlify/functions"
